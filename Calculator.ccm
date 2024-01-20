@@ -8,10 +8,10 @@ import :Vec;
 import :Type;
 
 class Calculator {
- private:
+private:
   Size<int> size_{};
 
- public:
+public:
   static void Sort();
 
   void Calc();

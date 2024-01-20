@@ -1,0 +1,47 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Upgrade homebrew
+        run: |
+          brew update
+        continue-on-error: true
+
+      - name: Install llvm
+        run: |
+          brew install llvm
+        continue-on-error: true
+
+      - name: Install cmake
+        run: |
+          brew install cmake
+        continue-on-error: true
+
+      - name: Install ninja
+        run: |
+          brew install ninja
+        continue-on-error: true
+
+      - name: Install eigen
+        run: |
+          brew install eigen
+        continue-on-error: true
+
+      - name: Build Release
+        run: |
+          cmake -B build -S . -GNinja
+          cmake --build build
+        env:
+          CC: /usr/local/opt/llvm/bin/clang
+          CXX: /usr/local/opt/llvm/bin/clang++
