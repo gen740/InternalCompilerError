@@ -1,0 +1,24 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  cmake:
+    cmds:
+      - cmake -B build -S . -DCMAKE_BUILD_TYPE=Release -GNinja
+    silent: true
+  build:
+    cmds:
+      - cmake --build build -v
+    silent: true
+  run:
+    cmds:
+      - ./build/main -d /Users/gen/home/Labo/Data/2023-11-01/2023-11-01-14_40_li8020dark/section_0000 -s foo.root
+    silent: true
+  clean-all:
+    cmds:
+      - rm -rf ./build
+    silent: true

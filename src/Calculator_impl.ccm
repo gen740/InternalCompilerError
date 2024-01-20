@@ -1,0 +1,21 @@
+module;
+
+module MyVec:Calculator_impl;
+
+import std_module;
+
+import :Calculator;
+import :Vec;
+import :DataVec;
+
+void Calculator::Sort() {
+  std::vector<int> v{};
+  std::ranges::sort(v);
+}
+
+void Calculator::Calc() {
+  auto v = Vec2D<int>(this->size_);
+  auto v2 = Vec2D<int>(this->size_);
+  (void)this->size_.total();
+  v.clone(v2);
+};

@@ -1,0 +1,11 @@
+module;
+
+export module MyVec:DataVec;
+
+import :Type;
+import std_module;
+
+template <typename T>
+class DataVec {
+  std::optional<Size<int>> size_;
+};

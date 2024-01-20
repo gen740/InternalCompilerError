@@ -1,0 +1,27 @@
+module;
+
+export module MyVec:Vec;
+
+import std_module;
+
+import :Type;
+
+template <typename PixelType>
+class Vec2D {
+  std::unique_ptr<PixelType[]> buf_ = nullptr;
+  PixelType* data_ = nullptr;
+  std::optional<Size<int>> size_{};
+
+ public:
+  explicit Vec2D(Size<int> size)
+      : buf_(std::unique_ptr<PixelType[]>(new PixelType[size.total()])),
+        size_(size){};
+
+  auto Size() -> Size<int> {
+    return this->size_.value();
+  }
+
+  auto clone(Vec2D& frame) -> void {
+    (void)std::format("{}", frame.Size());
+  }
+};
