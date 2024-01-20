@@ -33,11 +33,6 @@ jobs:
           brew install ninja
         continue-on-error: true
 
-      - name: Install eigen
-        run: |
-          brew install eigen
-        continue-on-error: true
-
       - name: Build Release
         run: |
           cmake -B build -S . -GNinja
