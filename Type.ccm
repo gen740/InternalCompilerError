@@ -1,8 +1,6 @@
-module;
+export module MyVec:Type;
 
 import std_module;
-
-export module MyVec:Type;
 
 template <typename Type> struct Size {
   Type width;

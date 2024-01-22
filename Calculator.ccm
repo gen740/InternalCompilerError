@@ -1,5 +1,3 @@
-module;
-
 export module MyVec:Calculator;
 
 import std_module;

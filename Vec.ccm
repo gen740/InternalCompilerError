@@ -1,5 +1,3 @@
-module;
-
 export module MyVec:Vec;
 
 import std_module;
