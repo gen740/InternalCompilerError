@@ -2,19 +2,6 @@ export module MyVec:Type;
 
 import std_module;
 
-template <typename Type> struct Size {
-  Type width;
-  Type height;
-
-  auto total() const { return width * height; }
+template <typename T> struct Size {
+  auto total() const { return 1; }
 };
-
-export {
-  template <class Type>
-  struct std::formatter<Size<Type>> : std::formatter<std::string> {
-    template <typename FormatContext>
-    auto format(const Size<Type> &mt, FormatContext &ctx) const {
-      return std::formatter<std::string>::format("", ctx);
-    }
-  };
-}

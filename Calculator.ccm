@@ -3,14 +3,8 @@ export module MyVec:Calculator;
 import std_module;
 
 import :Vec;
-import :Type;
+import :DataVec;
 
 class Calculator {
-private:
-  Size<int> size_{};
-
-public:
-  static void Sort();
-
-  void Calc();
+  void Calc() { (void)Size<int>().total(); };
 };
