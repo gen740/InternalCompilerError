@@ -2,6 +2,6 @@ export module MyVec:DataVec;
 
 import :Type;
 
-class DataVec {
+struct DataVec {
   Size<int> size_;
 };

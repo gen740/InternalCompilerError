@@ -1,7 +1,5 @@
 export module MyVec:Vec;
 
-import std_module;
-
 import :Type;
 
 template <typename T> struct Vec2D {

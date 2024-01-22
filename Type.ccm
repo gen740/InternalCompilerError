@@ -1,7 +1,5 @@
 export module MyVec:Type;
 
-import std_module;
-
 template <typename T> struct Size {
   auto total() const { return 1; }
 };

@@ -1,7 +1,5 @@
 export module MyVec:Calculator;
 
-import std_module;
-
 import :Vec;
 import :DataVec;
 
