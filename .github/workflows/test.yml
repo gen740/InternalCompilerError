@@ -24,20 +24,9 @@ jobs:
           brew install llvm
         continue-on-error: true
 
-      - name: Install cmake
-        run: |
-          brew install cmake
-        continue-on-error: true
-
-      - name: Install ninja
-        run: |
-          brew install ninja
-        continue-on-error: true
-
       - name: Build Release
         run: |
-          cmake -B build -S . -GNinja
-          cmake --build build
+          ./make.sh
         env:
           CC: /usr/local/opt/llvm/bin/clang
           CXX: /usr/local/opt/llvm/bin/clang++
