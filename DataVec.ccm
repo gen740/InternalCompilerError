@@ -1,7 +1,0 @@
-export module MyVec:DataVec;
-
-import :Type;
-
-struct DataVec {
-  Size<int> size_;
-};

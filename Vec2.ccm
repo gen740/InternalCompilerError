@@ -1,0 +1,7 @@
+export module MyVec:Vec2;
+
+import :Type;
+
+struct Vec2 {
+  Size<int> size_;
+};

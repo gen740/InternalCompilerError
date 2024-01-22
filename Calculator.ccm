@@ -1,8 +1,6 @@
 export module MyVec:Calculator;
 
 import :Vec;
-import :DataVec;
+import :Vec2;
 
-class Calculator {
-  void Calc() { (void)Size<int>().total(); };
-};
+auto Calculate() { return Size<int>().total(); };

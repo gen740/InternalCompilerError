@@ -2,10 +2,4 @@ export module MyVec:Vec;
 
 import :Type;
 
-template <typename T> struct Vec2D {
-  explicit Vec2D(){};
-
-  auto SizeValue() -> Size<int> { return {}; }
-
-  auto clone(Vec2D &vec) -> void { Size<int>().total(); }
-};
+int size_ = Size<int>().total();
